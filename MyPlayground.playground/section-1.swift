@@ -83,8 +83,70 @@ case let .Error(error):
     let serverResponse = "Failure...  \(error)"
 }
 
+protocol ExampleProtocol {
+    var simpleDescription: String {get}
+    mutating func adjust()
+}
+class SimpleClass {
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int =  69105
+    func adjust() {
+        simpleDescription += " Now 100% adjusted."
+    }
+}
+var sc = SimpleClass()
+sc.adjust()
+let scDescription = sc.simpleDescription
 
+struct SimpleStruct {
+    var simpleDescription: String = "A simple struct"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+var ss = SimpleStruct()
+ss.adjust()
+let ssDescription = ss.simpleDescription
 
+enum SimpleEnum {
+   case simpleDescription
+    func adjust() -> String {
+        return "Enum"
+    }
+}
+let se = SimpleEnum.adjust(.simpleDescription)
+
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+   mutating func adjust() {
+        self += 42
+    }
+}
+7.simpleDescription
+
+//let protocolValue: ExampleProtocol = sc
+//protocolValue.simpleDescription
+
+//泛型
+/*
+func repeat<ItemType>(item: ItemType, times: Int) -> [ItemType] {
+    //var result = [ItemType]()
+    var result = [ItemType]()
+    //var result: Int
+    for i in 0..<times {
+        result += item
+    }
+    return result
+}
+*/
+
+let http404Error = (404, "Not Found")
+
+let (statusCode, statusMessage) = http404Error
+
+println("The status code is \(statusCode)")
 
 
 
