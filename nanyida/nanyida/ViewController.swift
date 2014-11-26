@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         if stuNo.text == "" || stuPwd.text == "" || stuNo.text == "请输入学号" || stuPwd.text == "请输入密码"
         {
             var alert = UIAlertController(title: "Tips", message: "username or password is required!", preferredStyle: UIAlertControllerStyle.Alert)
+            var actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+            alert.addAction(actionCancel)
         self.presentViewController( alert, animated: true, completion: nil)
         }
         //隐藏键盘
@@ -36,6 +38,44 @@ class ViewController: UIViewController {
             NSString *response = [request responseString];
         }
         */
+       // http://donwait.vicp.cc:100/smu/student.ashx?A=signon&U=113200700100079&P=113200700100079
+
+        let urlString: String? = "http://donwait.vicp.cc:100/smu/student.ashx?A=signon&U=\(stuNo.text)&P=\(stuPwd.text)"
+        var url:NSURL?
+        var requrst:NSURLRequest?
+        var conn:NSURLConnection?
+        url = NSURL.URLWithString(urlString!)
+        requrst = NSURLRequest(URL:url!)
+        conn = NSURLConnection(request: requrst!,delegate: self)
+    
+        /*
+        if(conn){
+            println("http连接成功!")
+        }else{
+            println("http连接失败!")
+        }
+        */
+    }
+    func connection(connection:NSURLConnection!,didReceiveData data:NSData!){
+        var returnString:NSString?
+        returnString = NSString(data:data,encoding:NSUTF8StringEncoding)
+        println(returnString)
+      
+        if returnString!.substringWithRange(NSMakeRange(10,1)) == "0"
+        {
+        var alert = UIAlertController(title: "提示", message: "登录失败", preferredStyle: UIAlertControllerStyle.Alert)
+        var actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(actionCancel)
+        self.presentViewController( alert, animated: true, completion: nil)
+            return
+        }
+        else
+        {
+        var alert = UIAlertController(title: "提示", message: "登录成功", preferredStyle: UIAlertControllerStyle.Alert)
+        var actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(actionCancel)
+        self.presentViewController( alert, animated: true, completion: nil)
+        }
     }
 
     func sendRequest() {
