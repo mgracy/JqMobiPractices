@@ -45,6 +45,16 @@
                                     <action selector="btnLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i8A-pZ-mt9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nX-R0-GgE">
+                                <rect key="frame" x="27" y="316" width="240" height="30"/>
+                                <state key="normal" title="reset" backgroundImage="login_btn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5nw-nX-qQo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

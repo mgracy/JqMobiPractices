@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var stuPwd: UITextField!
     
+    @IBAction func btnReset(sender: UIButton) {
+        stuNo.text = "113200700100079"
+        stuPwd.text = "113200700100079"
+    }
     @IBAction func btnLogin(sender: UIButton) {
         //表单提交前的验证
         if stuNo.text == "" || stuPwd.text == "" || stuNo.text == "请输入学号" || stuPwd.text == "请输入密码"
