@@ -75,10 +75,14 @@ class ViewController: UIViewController {
         }
         else
         {
-        var alert = UIAlertController(title: "提示", message: "登录成功", preferredStyle: UIAlertControllerStyle.Alert)
+       /* var alert = UIAlertController(title: "提示", message: "登录成功", preferredStyle: UIAlertControllerStyle.Alert)
         var actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
         alert.addAction(actionCancel)
         self.presentViewController( alert, animated: true, completion: nil)
+*/
+            var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         var indexVC =   mainStoryboard.instantiateViewControllerWithIdentifier("indexViewController") as ViewController
+        self.presentViewController(indexVC, animated: true, completion: nil)
         }
     }
 

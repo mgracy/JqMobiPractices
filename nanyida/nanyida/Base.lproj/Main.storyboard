@@ -30,11 +30,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="113200700100079" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzi-zO-IPp">
-                                <rect key="frame" x="32" y="150" width="230" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ave-dA-fXq">
                                 <rect key="frame" x="27" y="269" width="240" height="30"/>
                                 <state key="normal" title="登 录" backgroundImage="login_btn.png">
@@ -55,6 +50,11 @@
                                     <action selector="btnReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5nw-nX-qQo"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="113200700100079" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzi-zO-IPp">
+                                <rect key="frame" x="32" y="150" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -71,7 +71,7 @@
         <!--Title-->
         <scene sceneID="JP2-uB-400">
             <objects>
-                <viewController id="Mj6-ci-O9y" customClass="indexViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="indexViewController" id="Mj6-ci-O9y" customClass="ViewController" customModule="nanyida" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5lG-5b-G1j"/>
                         <viewControllerLayoutGuide type="bottom" id="O0S-Iw-lHc"/>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52d-Jc-kLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="240"/>
+            <point key="canvasLocation" x="195" y="227"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jTT-Cq-tMB">
