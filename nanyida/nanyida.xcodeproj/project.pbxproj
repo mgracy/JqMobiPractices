@@ -32,6 +32,8 @@
 		0571AA9F1A24C6FA001B0690 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571AA9E1A24C6FA001B0690 /* Reachability.m */; };
 		0571AAA11A24C8BA001B0690 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0571AAA01A24C8BA001B0690 /* libxml2.dylib */; };
 		0571AAA31A24CAB5001B0690 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0571AAA21A24CAB5001B0690 /* libz.dylib */; };
+		05C98D2E1A2E166000924A66 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C98D2D1A2E166000924A66 /* UserViewController.swift */; };
+		05C98D301A2E19EE00924A66 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */; };
 		05D1C1B31A234B8100C38B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B21A234B8100C38B21 /* AppDelegate.swift */; };
 		05D1C1B61A234B8100C38B21 /* nanyida.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B41A234B8100C38B21 /* nanyida.xcdatamodeld */; };
 		05D1C1B81A234B8100C38B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B71A234B8100C38B21 /* ViewController.swift */; };
@@ -214,6 +216,8 @@
 		0571AA9E1A24C6FA001B0690 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "../../../pokeb-asi-http-request-9051a33/External/Reachability/Reachability.m"; sourceTree = "<group>"; };
 		0571AAA01A24C8BA001B0690 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0571AAA21A24CAB5001B0690 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		05C98D2D1A2E166000924A66 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = ../UserViewController.swift; sourceTree = "<group>"; };
+		05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		05D1C1AD1A234B8100C38B21 /* nanyida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nanyida.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D1C1B11A234B8100C38B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D1C1B21A234B8100C38B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -484,7 +488,9 @@
 				05D1C2121A234C0F00C38B21 /* setting */,
 				05D1C2211A234C0F00C38B21 /* tabbar */,
 				05D1C1B21A234B8100C38B21 /* AppDelegate.swift */,
+				05C98D2D1A2E166000924A66 /* UserViewController.swift */,
 				05D1C1B71A234B8100C38B21 /* ViewController.swift */,
+				05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */,
 				05D1C1B91A234B8100C38B21 /* Main.storyboard */,
 				05D1C1BC1A234B8100C38B21 /* Images.xcassets */,
 				05D1C1BE1A234B8100C38B21 /* LaunchScreen.xib */,
@@ -844,6 +850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C98D301A2E19EE00924A66 /* SettingViewController.swift in Sources */,
 				0571AA6F1A24BDE0001B0690 /* ASIDataCompressor.m in Sources */,
 				0571AA7C1A24BDE0001B0690 /* ASICloudFilesObjectRequest.m in Sources */,
 				0571AA811A24BDE0001B0690 /* ASIS3ObjectRequest.m in Sources */,
@@ -853,6 +860,7 @@
 				0571AA771A24BDE0001B0690 /* ASICloudFilesCDNRequest.m in Sources */,
 				0571AA6E1A24BDE0001B0690 /* ASIAuthenticationDialog.m in Sources */,
 				0571AA7A1A24BDE0001B0690 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				05C98D2E1A2E166000924A66 /* UserViewController.swift in Sources */,
 				0571AA781A24BDE0001B0690 /* ASICloudFilesContainer.m in Sources */,
 				0571AA761A24BDE0001B0690 /* ASIWebPageRequest.m in Sources */,
 				0571AA831A24BDE0001B0690 /* ASIS3ServiceRequest.m in Sources */,

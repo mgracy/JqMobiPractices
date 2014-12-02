@@ -82,6 +82,10 @@ class ViewController: UIViewController {
 */
             var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
          var indexVC =   mainStoryboard.instantiateViewControllerWithIdentifier("indexViewController") as ViewController
+            var tabbarController = mainStoryboard.instantiateViewControllerWithIdentifier("tabbarController") as UITabBarController
+            tabbarController.tabBarItem.image = UIImage(named: "tabbar_bg.png")
+            tabbarController.navigationController?.setNavigationBarHidden(true, animated: true)
+            self.presentViewController(tabbarController, animated: true, completion: nil)
         self.presentViewController(indexVC, animated: true, completion: nil)
         }
     }
