@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051BF4A61A30AA4F003E1CE4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BF4A51A30AA4F003E1CE4 /* SettingViewController.swift */; };
 		0571AA6E1A24BDE0001B0690 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571AA1D1A24BDE0001B0690 /* ASIAuthenticationDialog.m */; };
 		0571AA6F1A24BDE0001B0690 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571AA201A24BDE0001B0690 /* ASIDataCompressor.m */; };
 		0571AA701A24BDE0001B0690 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0571AA221A24BDE0001B0690 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -33,7 +34,6 @@
 		0571AAA11A24C8BA001B0690 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0571AAA01A24C8BA001B0690 /* libxml2.dylib */; };
 		0571AAA31A24CAB5001B0690 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0571AAA21A24CAB5001B0690 /* libz.dylib */; };
 		05C98D2E1A2E166000924A66 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C98D2D1A2E166000924A66 /* UserViewController.swift */; };
-		05C98D301A2E19EE00924A66 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */; };
 		05D1C1B31A234B8100C38B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B21A234B8100C38B21 /* AppDelegate.swift */; };
 		05D1C1B61A234B8100C38B21 /* nanyida.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B41A234B8100C38B21 /* nanyida.xcdatamodeld */; };
 		05D1C1B81A234B8100C38B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C1B71A234B8100C38B21 /* ViewController.swift */; };
@@ -133,6 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051BF4A51A30AA4F003E1CE4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		0571AA1C1A24BDE0001B0690 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		0571AA1D1A24BDE0001B0690 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		0571AA1E1A24BDE0001B0690 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -217,7 +218,6 @@
 		0571AAA01A24C8BA001B0690 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0571AAA21A24CAB5001B0690 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		05C98D2D1A2E166000924A66 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = ../UserViewController.swift; sourceTree = "<group>"; };
-		05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		05D1C1AD1A234B8100C38B21 /* nanyida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nanyida.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D1C1B11A234B8100C38B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05D1C1B21A234B8100C38B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -490,13 +490,13 @@
 				05D1C1B21A234B8100C38B21 /* AppDelegate.swift */,
 				05C98D2D1A2E166000924A66 /* UserViewController.swift */,
 				05D1C1B71A234B8100C38B21 /* ViewController.swift */,
-				05C98D2F1A2E19EE00924A66 /* SettingViewController.swift */,
 				05D1C1B91A234B8100C38B21 /* Main.storyboard */,
 				05D1C1BC1A234B8100C38B21 /* Images.xcassets */,
 				05D1C1BE1A234B8100C38B21 /* LaunchScreen.xib */,
 				05D1C1B41A234B8100C38B21 /* nanyida.xcdatamodeld */,
 				05D1C1B01A234B8100C38B21 /* Supporting Files */,
 				05D1C27C1A2360F100C38B21 /* xnggViewController.swift */,
+				051BF4A51A30AA4F003E1CE4 /* SettingViewController.swift */,
 			);
 			path = nanyida;
 			sourceTree = "<group>";
@@ -850,7 +850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C98D301A2E19EE00924A66 /* SettingViewController.swift in Sources */,
+				051BF4A61A30AA4F003E1CE4 /* SettingViewController.swift in Sources */,
 				0571AA6F1A24BDE0001B0690 /* ASIDataCompressor.m in Sources */,
 				0571AA7C1A24BDE0001B0690 /* ASICloudFilesObjectRequest.m in Sources */,
 				0571AA811A24BDE0001B0690 /* ASIS3ObjectRequest.m in Sources */,

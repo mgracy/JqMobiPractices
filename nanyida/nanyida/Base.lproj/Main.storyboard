@@ -7,7 +7,7 @@
         <!--Setting View Controller-->
         <scene sceneID="Bae-nH-26Q">
             <objects>
-                <viewController id="Rta-KG-k73" customClass="SettingViewController" sceneMemberID="viewController">
+                <viewController id="Rta-KG-k73" customClass="SettingViewController" customModule="nanyida" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jbH-dd-L7r"/>
                         <viewControllerLayoutGuide type="bottom" id="wPC-XS-I6m"/>
@@ -16,14 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BlD-Yw-RsZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hzB-qq-GYf">
+                                <rect key="frame" x="16" y="-8" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rta-KG-k73" id="SWB-Dr-qIu"/>
+                                    <outlet property="delegate" destination="Rta-KG-k73" id="jpR-ve-ngG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_Settings.png" selectedImage="tabbar_on.png" id="AKa-xJ-KjT"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tabbar_Settings.png" selectedImage="tabbar_Settings.png" id="AKa-xJ-KjT"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWS-WL-Dw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -54,7 +58,6 @@
         <scene sceneID="hAa-Um-r6R">
             <objects>
                 <tabBarController storyboardIdentifier="tabbarController" id="KCE-qU-h0u" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
