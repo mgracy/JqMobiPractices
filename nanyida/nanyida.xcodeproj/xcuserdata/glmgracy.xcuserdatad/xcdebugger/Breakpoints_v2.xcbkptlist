@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91">
+            startingLineNumber = "92"
+            endingLineNumber = "92">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113">
+            startingLineNumber = "114"
+            endingLineNumber = "114">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -166,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138">
+            startingLineNumber = "139"
+            endingLineNumber = "139">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134">
+            startingLineNumber = "135"
+            endingLineNumber = "135">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,11 +194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128">
+            startingLineNumber = "129"
+            endingLineNumber = "129">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,11 +208,155 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nanyida/SettingViewController.swift"
-            timestampString = "439396978.653833"
+            timestampString = "439398250.205419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123">
+            startingLineNumber = "124"
+            endingLineNumber = "124">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650610.659637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650614.421507"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650617.661138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650619.790903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650620.540814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "viewDidDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650625.429861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650626.14296"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650626.82212"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nanyida/SettingViewController.swift"
+            timestampString = "439650629.563542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

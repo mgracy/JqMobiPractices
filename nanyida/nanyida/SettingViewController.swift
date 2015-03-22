@@ -20,10 +20,10 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationItem.title = "您好 Swift"
         
         self.dataArray = NSMutableArray()
-        self.dataArray!.addObject("11111")
-        self.dataArray!.addObject("22222")
-        self.dataArray!.addObject("33333")
-        self.dataArray!.addObject("44444")
+        for(var i = 0; i <= 20; i++)
+        {
+            self.dataArray!.addObject("cell\(i)")
+        }
         
         NSLog("%@", self.dataArray!)
         
@@ -61,7 +61,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.dataArray!.count
+       // return self.dataArray!.count
+        return 9
     }
     
     
