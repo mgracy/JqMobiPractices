@@ -1,2 +1,17 @@
+<<<<<<< HEAD
 *.DS_Store
 *.xcuserstate
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> 8de9672509dea8cee46d5b539ac0ce5d35d1dea7
