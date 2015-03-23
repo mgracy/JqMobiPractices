@@ -7,7 +7,29 @@
 	<title>Listview - jQuery Mobile Demos</title>
 	<link rel="stylesheet" href="jquery.mobile-1.4.1.min.css">
 	<script src="js/jquery.js"></script>
-	<script src="js/jquery.mobile-1.4.1.min.js"></script>
+	<script type="text/javascript">
+//run this script after jQuery loads, but before jQuery Mobile loads
+//加入这段js，让IE也能运行jquery mobile
+//customize jQuery Mobile to let IE7+ in (Mobile IE)
+$(document).bind("mobileinit", function(){
+ $.extend(  $.mobile , {
+ 
+ //extend gradeA qualifier to include IE7+
+   gradeA: function(){    
+    //IE version check by James Padolsey, modified by jdalton - from http://gist.github.com/527683
+var ie = (function() {
+   var v = 3, div = document.createElement('div'), a = div.all || [];
+   while (div.innerHTML = '<!--[if gt IE '+(++v)+']><br><![endif]-->', a[0]); 
+   return v > 4 ? v : !v;
+}());
+   
+    //must either support media queries or be IE7+
+    return $.support.mediaquery || (ie && ie >= 7);
+   }
+ });
+});
+</script>
+<script src="js/jquery.mobile-1.4.1.min.js"></script>
 </head>
 <body>
 	<div data-role="page" id="page">
@@ -22,14 +44,73 @@
 		<div data-role="collapsible">
   			<h1>OA & Smooth</h1>
   			<ul data-role="listview">
-			 	<li><a href="http://www.baidu.com">INX应用需求申请系统</a></li>
-			 	<li><a href="http://www.qq.com">表单签核平台</a></li>
-			 	<li><a href="http://www.163.com">Smooth</a></li>
+			 
+						<li><a href="http://10.189.128.164/cmiportal/apprlist.aspx" target="_blank" title="INX待簽核文件"><span>INX Portal待簽核文件(非臺灣地區)</span></a></li>
+	 					<li><a href="http://inlcnhrap02.cminl.oa/MISRequest2/Main.aspx" target="_blank" title="INX應用需求申請系統"><span>INX應用需求申請系統</span></a></li>
+	 					<li><a href="http://peoplesearch.cminl.oa/" target="_blank" title="找人網,聯繫方式查詢(114)"><span>找人網,聯繫方式查詢(114)</span></a></li>
+	 					<li><a href="http://jnb2bweb01/AAM" target="_blank" title="AAM"><span>AAM Prod</span></a></li>
+	 					<li><a href="http://jnb2bweb01/AAMDev" target="_blank" title="AAM Test"><span>AAM Test</span></a></li>
+ 						<li><a href="http://jnb2bweb01/SAM/Login.aspx" target="_blank" title="SAM Prod"><span>SAM Prod</span></a></li>
+ 						<li><a href="http://jnb2bweb01/SAMDev/Login.aspx" target="_blank" title="SAM Test"><span>SAM Test</span></a></li>
+ 						<li><a href="http://cmip.cminl.oa/sites/misip/bpm/Pages/Home.aspx" target="_blank" title="BPM"><span>BPM</span></a></li>
+	 					<li><a href="http://10.189.128.164/NHWebPortal/apprlist.aspx" target="_blank" title="NH Portal待簽核文件"><span>NH Portal待簽核文件</span></a></li>
+	 					<li><a href="http://phoaap02.cminl.oa/NHBBS-WEB/Frameset.htm" target="_blank" title="佛山簡體公告欄系統"><span>佛山簡體公告欄系統</span></a></li>
+	 					<li><a href="http://phoaap01.cminl.oa/NHZSF/Frameset.htm" target="_blank" title="佛山雜收發簽核系統"><span>佛山雜收發簽核系統</span></a></li>
+	 					<li><a href="http://phoaap01.cminl.oa/NBeForm-Web/Login.htm" target="_blank" title="佛山表單簽核平臺系統"><span>佛山表單簽核平臺系統</span></a></li>
+	 					<li><a href="http://phoaap01.cminl.oa/NHRBG/Frameset.htm" target="_blank" title="佛山放行單系統"><span>佛山放行單系統</span></a></li>
+	 					<li><a href="http://10.189.128.236:9080/Vendor/jsp/home/login.jsp" target="_blank" title="承攬商系統"><span></span>承攬商系統</a></li>
+	 					<li><a href="http://phoaap01.cminl.oa/NHICS/Frameset.htm" target="_blank" title="佛山備品管理系統"><span>佛山備品管理系統</span></a></li>
+	 					<li><a href="http://10.189.128.239:9080/SEC2Web/" target="_blank" title="調查與測試中心"><span>調查與測試中心</span></a></li>
+	 					<li><a href="http://phoaap01.cminl.oa/Vendor/" target="_blank" title="佛山承攬商簽核系統"><span>佛山承攬商簽核系統</span></a></li>
+	 					<li><a href="http://10.189.128.236:9080/LBIP" target="_blank" title="佛山LBIP系統"><span>佛山LBIP系統</span></a></li>
+	 					<li><a href="http://10.189.128.84/bms/" target="_blank" title="會議室預約管理系統"><span>會議室預約管理系統</span></a></li>
+	 					<li><a href="http://10.189.128.84/GASystem/" target="_blank" title="外來訪客進廠管理系統"><span>外來訪客進廠管理系統</span></a></li>
+	 					<li><a href="http://10.189.128.84/CardSystem/" target="_blank" title="刷卡記錄查詢系統"><span>刷卡記錄查詢系統</span></a></li>
+						<li><a href="http://nhhrm/login.asp" target="_blank" title="SmoothHR"><span>佛山SmoothHr系統</span></a></li>
+	 					<li><a href="http://10.189.128.200/NHPCACT/Login.aspx" target="_blank" title="佛山落產通報系統"><span>佛山落產通報系統</span></a></li>
+	 					<li><a href="http://10.189.128.209/main.php" target="_blank" title="Event Monitor"><span>Event Monitor</span></a></li> 			
+ 						<li><a href="http://10.189.209.114/ECC/Logon.aspx" target="_blank" title="ECC"><span>Employee Care Center</span></a></li>
+ 						<li><a href="http://10.189.128.96/SmspNew" target="_blank" title="SMSP"><span>短信發送平台</span></a></li>
+ 						<li><a href="http://guangdong.ums86.com:8899/sms_hb/services/Sms?wsdl" target="_blank" title="SMSP Unicom Interface"><span>短信發送平台接口確認</span></a></li>
+ 						<li><a href="http://cmip.cminl.oa/ip/NHOP/Pages/Home.aspx" target="_blank" title="NHOP"><span>NHOP</span></a></li>
+ 						<li><a href="../Web/index.html" target="_blank" title="B2B WebPortal"><span>B2B WebPortal</span></a></li>
+						<li><a href="lhweb.htm" target="_blank" title="LHWeb"><span>LHWeb</span></a></li>
+						<li><a href="http://10.189.128.200" target="_blank" title="Other Reports"><span>部分報表</span></a></li>
+						<li><a href="http://gix/LMS/LOGIN.ASPX" target="_blank" title="LMS"><span>LMS</span></a></li>
+						<li><a href="http://3in1scfgt.cminl.oa/Frameset.htm" target="_blank" title="3in1scfgt"><span>3in1策略客戶調撥簽核系統</span></a></li>
+						<li><a href="http://adm.cminl.oa/logon.aspx" target="_blank" title="adm"><span>AD帳號查詢系統</span></a></li>
+						<li><a href="http://inllhweb03/ecc/ToExcel.aspx?type=0" target="_blank" title="ECC每日案件"><span>ECC每日案件</span></a></li>
+						<li><a href="http://inllhdrm01/innolux/default.aspx" target="_blank" title="EDCC加密網站"><span>EDCC加密網站</span></a></li>
+						<li><a href="http://112.efoxconn.com/electable/logsearch.aspx" target="_blank" title="富鴻網112"><span>富鴻網112</span></a></li>
+						<li><a href="http://inxhr.cminl.oa/pmd/Default.aspx" target="_blank" title="PMD"><span>PMD</span></a></li>
+						<li><a href="http://bulletin.local/qmsm" target="_blank" title="qmsm"><span>開機宣導畫面</span></a></li>
+						<li><a href="http://nhgetemp1/GE/Default.aspx" target="_blank" title="GE"><span>GE聯絡單系統</span></a></li>
+						<li><a href="http://tnjdkap1/pdskpi" target="_blank" title="NPDP KPI Portal"><span>NPDP KPI Portal</span></a></li>
+					  <li><a href="http://inlcnhrap02/MasterFlow/Main.aspx" target="_blank" title="MasterFlow Portal"><span>MasterFlow Portal(JN Prod)</span></a></li>
+            <li><a href="http://inlcnhriqa01:84/MasterFlowPortal/Main.aspx" target="_blank" title="MasterFlow Portal"><span>MasterFlow Portal(JN Test)</span></a></li>
+						<li><a href="http://jnwf02.cminl.oa/app/m_dir/ap6001.nsf" target="_blank" title="MyIT"><span>MyIT</span></a></li>
+						<li><a href="http://10.189.128.96/AAM/Page/AAM.aspx" target="_blank" title="會議刷卡簽到系統"><span>會議刷卡簽到系統</span></a></li>
+						<li><a href="http://jnoeapp01/meeting/forms/attendeelog1Report1.aspx?SYS=" target="_blank" title="會議刷卡簽到報表"><span>會議刷卡簽到報表</span></a></li>
+						<li><a href="http://inip/sites/MISIP/EB/Web/Lists/Web/view.aspx" target="_blank" title="Web討論區"><span>Web討論區</span></a></li>
+						<li><a href="http://10.189.147.80/IssueTracker" target="_blank" title="IssueTracker"><span>IssueTracker</span></a></li>
+						<li><a href="http://10.189.128.9:8080/80885/index.jsp" target="_blank" title="80839"><span>80839</span></a></li>
+						<li><a href="http://tnvcmipad/semgs/forms/service_view.aspx" target="_blank" title="INX資產盤點系統"><span>INX資產盤點系統</span></a></li>
+						<li><a href="http://tnvcmipad.cminl.oa/semgs/ajax/serviceFilter.html" target="_blank" title="INX資產盤點系統Filter"><span>INX資產盤點系統Filter</span></a></li>
+						<li><a href="http://pfals.cminl.oa/Main.aspx" target="_blank" title="全球簽核系統盤點"><span>全球簽核系統盤點</span></a></li>
+						<li><a href="http://seimgs.cminl.oa" target="_blank" title="[SEIMGS]資產資訊系統"><span>[SEIMGS]資產資訊系統</span></a></li>
+						<li><a href="http://cmip.cminl.oa/sites/MISIP/EB/Web/Pages/Default_1.aspx" target="_blank" title="Web(ASP.NET) Function Committee"><span>Web(ASP.NET) Function Committee</span></a></li>
+						<li><a href="http://10.189.128.96/NHEES/Forms/WorkflowSitePortal.aspx" target="_blank" title="佛山LGPCP工程實驗系統"><span>佛山LGPCP工程實驗系統</span></a></li>
+						<li><a href="http://masterflow.local/template/WSWorkFlow.nsf/WSFlow?WSDL" target="_blank" title="MasterFlow正式區"><span>MasterFlow正式區</span></a></li>	
+					  <li><a href="http://jnwf10.cminl.oa/template/WSWorkFlow.nsf/WSFlow?WSDL" target="_blank" title="MasterFlow測試區"><span>MasterFlow測試區</span></a></li>
+					  <li><a href="http://10.56.196.2/plugins/weathermap/weathermap-cacti-plugin.php?action=viewmap&id=362a175b3f67f9b6943b" target="_blank" title="INX雲"><span>INX雲</span></a></li>
 			</ul>
 		</div>
 		<div data-role="collapsible">
   			<h1>FSMIS Portal</h1>
-  			<p>我是可折叠的内容。</p>
+  				<li><a href="http://jnoeapp01.cminl.oa/meeting/forms/attendeelog1Report1.aspx?SYS=HN1" target="_blank" title="MIS ALog1"><span>MIS ALog1</span></a></li>
+						<li><a href="http://cmipad.cminl.oa/InfoMon/meetingminutes.aspx?meetingtype=HN1" target="_blank" title="Meeting Minutes"><span>華南MIS Meeting Minutes</span></a></li>
+			<li><a href="http://nhip.cminl.oa/sites/MISLH/Pages/Home.aspx" target="_blank" title="MISLH Portal"><span>華南MIS Portal</span></a>
+			</li>
 		</div>
 		<div data-role="collapsible">
   			<h1>点击我 - 我可以折叠！</h1>
