@@ -1,0 +1,108 @@
+<!doctype html>
+<html ng-app>
+    <head>
+    	<meta charset="utf-8" />
+        <script src="angular.min.js"></script>
+    </head>
+    <body>
+    	<div class="container">
+    		<div ng-init="friends =[{name:'Eric.Mak', phone:'669630'},
+    								{name:'Xiaoyu.Ou',phone:'67444'},
+    								{name:'Weizeng.Guo',phone:'669324'},
+    								{name:'Jiali.Yang',phone:'690103'},
+    								{name:'Bruce.Han',phone:'690805'},
+    								{name:'Jovi.Yang',phone:'690801'}]"
+    		</div>
+    		Search: <input ng-model="searchText">
+    		<table id="searchTextResults">
+    			<tr><th>Name</th><th>Phone</th></tr>
+    			<tr ng-repeat="friend in friends | filter:searchText">
+    				<td>{{friend.name}}</td>
+    				<td>{{friend.phone}}</td>
+    			</tr>
+    		</table>
+
+    		<hr>
+    		Any: <input ng-model="search.$"><br />
+    		Name onle <input ng-model="search.name"><br />
+    		Phone only <input ng-model="search.phone"><br />
+    		<table id="searchObjResults">
+    			<tr><th>Name</th><th>Phone</th></tr>
+    			<tr ng-repeat="friend in friends | filter:search">
+    				<td>{{friend.name}}</td>
+    				<td>{{friend.phone}}</td>
+    			</tr>
+    		</table>
+    		<input ng-trim="false" type="text" ng-init="name=true" ng-model="name" placeholder="type sth here">
+    	<!--<input ng-init="name= 'World" ng-modal="name" />-->
+       <div>Hello {{ name }}!</div>
+        <hr>
+        ng-bind的写法:
+        Hello <span data-ng-bind="name" ></span>
+        <div ng-if="name == 'kitty'">
+        	<img width="300" src="kittyCat.png" />
+        </div>
+        <div>
+        	<input type="number" ng-model="int" required ng-pattern="/\d+/" />
+        	<div class="x">{{int|number}}</div>
+        </div>
+        <br />
+        <div>
+        	<input type="checkbox" ng-model="checked" ng-init="checked=true" />
+        	Show when checked:
+        	<span ng-if="checked">
+        		I'm removing  when the checkbox is unchecked.
+        	</span>
+        </div>
+        <hr>
+
+        基于DOM的模版
+        <ul>
+        <li>Dirty-Check(angular.equals)</li>
+        1)===
+        2)类型相同,并且所有属性满足===
+        3)都是NaN
+    	</ul>
+    	双向数据绑定
+    	Directive(指令)
+    	ng-init, ng-if都是指令; {{name}}就是一个插入字符串的指令
+
+		<hr>
+		<div ng-controller="Ctrl1">
+			hello, {{ name }}!
+			<button ng-click="change()">click me</button>
+		</div>
+		<hr>
+		<div ng-controller="Ctrl2">
+			<ul>
+				<li ng-repeat="money in moneys">{{ money|number:2}}</li>
+			</ul>
+		</div>
+    </div>
+    <script type="text/javascript">
+    	window.onload = function() {
+    		angular.bootstrap(document);
+    	}
+    </script>
+    <script type="text/javascript">
+    	function Ctrl1($scope){
+    		$scope.name = 'World';
+
+    		$scope.change = function(){
+    			setTimeout(function(){
+    				$scope.name = 'kitty';
+    				$scope.$apply();
+    			},1000);
+    		}
+
+    		$scope.$watch('name', function() {
+    			console.log($scope.name);
+    		})
+    	}
+
+    	function Ctrl2($scope) {
+    		$scope.moneys = [1000, 2000, 3000.121212, 10000];
+    	}
+    </script>
+    </body>
+</html>
