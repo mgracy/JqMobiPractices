@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+    	<meta charset="utf-8" />
+        <script src="angular.min.js"></script>
+       <style type="text/css">img{height: 300px;float: left;}</style>
+    </head>
+    <body>
+    <div>
+        <div class="container" ng-controller="photoController">
+            <div>
+                <input ng-model="keyword" /><input class="btn-primary" type="button" value="提交" ng-click="fetch()" />
+            </div>
+            <div>
+                <img ng-src="{{photo.img}}" ng-repeat="photo in photos" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	window.onload = function() {
+    		angular.bootstrap(document);
+    	}
+    </script>
+    <script type="text/javascript">
+    	var api="https://mapptest.innolux.com/teamplus_innolux/API/ChatChannelService.ashx?ASK=sendMessage&Type=1&ID=8DD21700&CONTENT=2015&CONTENT2=ThisIsContent2&MAIL=&RECIPIENTS=[10022936,10003756]&MSGTYPE=1&SYSID=9b002545-f6d2-4162-a28d-503384fba9ba";
+        angular.module('app',[])
+            .controller('photoController',function($scope,$http){
+                    $scope.photos=[];
+                    $scope.keyword= "美女";
+
+                    $scope.fetch = function(){
+                        $http.jsonp(api + '&callback=JSON_CALLBACK')
+                            .success(function(data){
+                                $scope.photos = data.list.slice(0,10);
+                            });
+                    };
+            });
+    </script>
+    </body>
+</html>
