@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>360旋转图片</title>
+		<script type="text/javascript">
+			var arrImg = [];
+			var dist = 0;
+			for (var i = 1; i < 10; i++) {
+				var newImage = new Image();
+				newImage.src = "images\\" + i + ".png";
+				arrImg.push(newImage);
+			}
+
+			document.onmousemove = function(event){
+				var current = event.clientX;
+				var img = document.getElementById("img1");
+
+				dist =Math.floor(current/50);
+				dist = dist % 10;
+				if(dist ==0)
+					dist = 1;
+				img.src = "images\\" + dist + ".png";
+			};
+		</script>
+	</head>
+	<body>
+		<img id="img1" src="images\1.png" alt="fruit">
+	</body>
+</html>
