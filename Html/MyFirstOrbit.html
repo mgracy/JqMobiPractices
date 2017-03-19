@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Orbit | slider | banner animation</title>
+	<meta keyword="Orbit, slider, banner animation">
+
+	<link rel="stylesheet" href="orbit-1.3.0.css">
+	<script src="jquery-1.5.1.min.js"></script>
+	<script src="jquery.orbit-1.3.0.js"></script>
+	<style>
+		img{
+			/*cursor: pointer;*/
+			width: 300px;
+			height: 400px;
+		}
+	</style>
+	<script>
+
+	   //  defaults: {  
+    //   animation: 'horizontal-push', 		// fade, horizontal-slide, vertical-slide, horizontal-push, vertical-push
+    //   animationSpeed: 600, 				// how fast animtions are
+    //   timer: true, 						// true or false to have the timer
+    //   advanceSpeed: 4000, 				// if timer is enabled, time between transitions 
+    //   pauseOnHover: false, 				// if you hover pauses the slider
+    //   startClockOnMouseOut: false, 		// if clock should start on MouseOut
+    //   startClockOnMouseOutAfter: 1000, 	// how long after MouseOut should the timer start again
+    //   directionalNav: true, 				// manual advancing directional navs
+    //   captions: true, 					// do you want captions?
+    //   captionAnimation: 'fade', 			// fade, slideOpen, none
+    //   captionAnimationSpeed: 600, 		// if so how quickly should they animate in
+    //   bullets: false,						// true or false to activate the bullet navigation
+    //   bulletThumbs: false,				// thumbnails for the bullets
+    //   bulletThumbLocation: '',			// location from this file where thumbs will be
+    //   afterSlideChange: $.noop,		// empty function 
+    //   fluid: false,             // true or ratio (ex: 4x3) to force an aspect ratio for content slides, only works from within a fluid layout
+    //   centerBullets: true    // center bullet nav with js, turn this off if you want to position the bullet nav manually
+ 	  // },
+		$(function(){
+			$("#featured").orbit({
+				bullets: true,
+				// advanceSpeed:3000,
+				// pauseOnHover: true, 
+				// startClockOnMouseOut: true, 
+				// captions: "true",
+				directionalNav: false,
+				bulletThumbs: true
+			});
+
+
+			// $("img").hover(function(){
+			// 	$(this).prop("disabled", "disabled");
+			// });
+			// $("img").click(function(){
+			// 	window.location.href="http://www.qq.com";
+			// });
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+            <div id="featured">
+                <img src="images/WechatIMG4.jpeg" data-caption="#htmlCaption1" />
+                <img src="images/WechatIMG5.jpeg" data-caption="#htmlCaption2" />
+                <img src="images/WechatIMG6.jpeg" data-caption="#htmlCaption3" onclick="location.href='http://www.qq.com'"  style="cursor: pointer;" />
+                <img src="images/WechatIMG7.jpeg" data-caption="#htmlCaption4" /> 
+                <a href="http://www.qq.com" class="photo">sss
+                	<img src="images/WechatIMG5.jpeg" alt="WechatIMG5">
+                	redirect to 5
+            <span class="orbit-caption" id="htmlCaption3"><strong>是否继续</strong></span>
+                </a>
+            </div>
+
+            <!-- Captions for Orbit -->
+            <span class="orbit-caption" id="htmlCaption1"><strong>欢迎</strong></span>
+            <span class="orbit-caption" id="htmlCaption2"><strong>首页</strong></span>
+            <span class="orbit-caption" id="htmlCaption3"><strong>是否继续</strong></span>
+            <span class="orbit-caption" id="htmlCaption4"><strong>4</strong></span>
+            <span class="orbit-caption" id="htmlCaption5"><strong>5</strong></span>
+            <span class="orbit-caption" id="htmlCaption6"><strong>6</strong></span>
+            <span class="orbit-caption" id="htmlCaption7"><strong>7</strong></span>
+        </div>
+</body>
+</html>
